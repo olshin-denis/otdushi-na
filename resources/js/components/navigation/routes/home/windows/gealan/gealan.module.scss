@@ -1,0 +1,253 @@
+@import "http://otdushi-na-okna/fonts/Lobster/lobster.css";
+@import "http://otdushi-na-okna/fonts/RussoOne/RussoOne.css";
+
+%shablonNewFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+%shablonSizeWeight {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+%shablonFlexies{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+%shablonBorder {
+    background-color: rgba(178, 178, 178, 0.18);
+    border-radius: 1rem;
+}
+
+%shablonAHref {
+    a {
+        color: black;
+        transition: 300ms;
+    }
+    a:hover {
+        color: #ff0000;
+        transition: 300ms;
+    }
+}
+
+$width: 30rem;
+
+$padding: 1rem;
+
+.grid {
+    display: grid;
+    background-color: aliceblue;
+    grid-template-areas:
+    "g0 g0"
+    "g1 g2";
+    font-size: 2rem;
+    font-weight: 600;
+    grid-template-rows:  repeat(auto-fit, minmax(0px, auto));
+
+    .grid0 {
+        font-size: 2.5rem;
+        padding: 1.5rem 0;
+        grid-area: g0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .grid1 {
+        grid-area: g1;
+        display: grid;
+        grid-template-rows:  repeat(auto-fit, minmax(0px, auto));
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .grid2 {
+        grid-area: g2;
+        display: grid;
+        grid-template-rows:  repeat(auto-fit, minmax(0px, auto));
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.pad {
+    padding: 0 0 1rem 0;
+
+        a{
+            color: black;
+        }
+
+
+        a:hover{
+            color: red;
+            cursor: pointer;
+        }
+}
+.position{
+    position: relative;
+}
+.display0 {
+    padding: 0 0 1rem 0;
+
+    img {
+        width: $width;
+        height: $width;
+    }
+
+    .display1 {
+        position: absolute;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 70%;
+            a{
+                //text-align: center;
+                //padding: 0 1rem;
+                display: flex;
+                flex-direction: column;
+                color: black;
+                overflow-wrap: break-word;
+            }
+        }
+        div:hover{
+            a{
+                display: flex;
+                flex-direction: column;
+                color: red;
+                cursor: pointer;
+            }
+        }
+        top: 0;
+        background-color: rgba(156, 182, 241, 0.78);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 300ms;
+
+        a {
+            @extend %shablonNewFlex;
+        }
+    }
+
+    .display1:hover {
+        opacity: 0.8;
+        transition: 300ms;
+        //color: red;
+    }
+}
+
+.newGrid{
+    font-size: 1.5rem;
+    display: grid;
+    grid-gap: 1rem;
+    padding-top: 1rem;
+
+    grid-template-areas:
+    "g0"
+    "g1";
+    grid-template-rows:  repeat(auto-fit, minmax(0px, auto));
+    grid-template-columns:  repeat(auto-fit, minmax(0px, auto));
+    .grid0{
+        grid-area: g0;
+        font-size: 2rem;
+        font-family: "Arial";
+        font-weight: 600;
+        @extend %shablonNewFlex;
+    }
+    .grid1{
+        grid-area: g1;
+        @extend %shablonFlexies;
+        .grid1_1{
+            width: 30rem;
+            height: 15rem;
+            @extend %shablonNewFlex;
+            @extend %shablonBorder;
+            justify-content: space-around;
+            padding: 1rem;
+            margin: 1rem;
+            .heigh{
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+            div{
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                //padding: 0.5rem;
+                //text-align: center
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-areas:
+        "g0"
+        "g1"
+        "g2";
+        grid-template-rows:  repeat(auto-fit, minmax(0px, auto));
+        .grid0 {
+        }
+
+        .grid1 {
+            div {
+            }
+        }
+
+        .grid2 {
+            div {
+            }
+        }
+    }
+    .display0 {
+
+        img {
+            width: auto;
+            height: auto;
+        }
+
+        .display1 {
+            div{
+            }
+            width: 100%;
+            height: 100%;
+
+        }
+
+    }
+}
+@media screen and (max-width: 320px){
+    .newGrid{
+        .grid0{
+        }
+        .grid1{
+            .grid1_1{
+                width: 30rem;
+                height: auto;
+                padding: 1rem;
+                //margin: 1rem;
+                .heigh{
+                }
+                div{
+                }
+            }
+        }
+    }
+}

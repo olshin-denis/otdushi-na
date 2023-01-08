@@ -1,0 +1,96 @@
+@import "http://otdushi-na-okna/fonts/Lobster/lobster.css";
+@import "http://otdushi-na-okna/fonts/RussoOne/RussoOne.css";
+.display0 .display1 a, .grid .grid3 div, .grid .grid2 div, .grid .grid1 div, .grid .grid0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.grid .grid3, .grid .grid2, .grid .grid1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.grid .grid3 div a, .grid .grid2 div a, .grid .grid1 div a {
+  color: black;
+  transition: 300ms;
+}
+.grid .grid3 div a:hover, .grid .grid2 div a:hover, .grid .grid1 div a:hover {
+  color: #ff0000;
+  transition: 300ms;
+}
+
+.grid {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-areas: "g0 g0 g0" "g1 g2 g3";
+  grid-template-rows: repeat(auto-fit, minmax(0px, auto));
+}
+.grid .grid0 {
+  grid-area: g0;
+  font-size: 3rem;
+}
+.grid .grid1 {
+  grid-area: g1;
+}
+.grid .grid1 div {
+  padding: 0 0 1rem 0;
+}
+.grid .grid2 {
+  grid-area: g2;
+}
+.grid .grid2 div {
+  padding: 0 0 1rem 0;
+}
+.grid .grid3 {
+  grid-area: g3;
+}
+.grid .grid3 div {
+  padding: 0 0 1rem 0;
+}
+
+img {
+  height: 30rem;
+  width: 30rem;
+}
+
+.display0 {
+  position: relative;
+}
+.display0 .display1 {
+  background-color: rgba(156, 182, 241, 0.51);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 300ms;
+  padding: 0 1rem 0 1rem;
+}
+.display0 .display1:hover {
+  opacity: 1;
+  transition: 300ms;
+}
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    grid-template-areas: "g0" "g1" "g2" "g3";
+  }
+  .grid .grid1 {
+    font-size: 1.5rem;
+  }
+  .grid .grid2 {
+    font-size: 1.5rem;
+  }
+  .grid .grid3 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=rehau.module.css.map */

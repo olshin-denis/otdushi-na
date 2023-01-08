@@ -1,0 +1,205 @@
+@import "http://otdushi-na-okna/fonts/RussoOne/RussoOne.css";
+.newGrid .grid0, .grid .grid2 div, .grid .grid1 div, .grid .grid0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newGrid .grid4 div, .newGrid .grid3 div, .newGrid .grid2 div, .newGrid .grid1 div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.grid .grid2, .grid .grid1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.newGrid .grid4, .newGrid .grid3, .newGrid .grid2, .newGrid .grid1 {
+  background-color: rgba(178, 178, 178, 0.18);
+  border-radius: 1rem;
+}
+
+.grid {
+  background-color: rgba(156, 182, 241, 0.2);
+}
+
+.grid .grid2 div a, .grid .grid1 div a {
+  color: black;
+  transition: 300ms;
+}
+.grid .grid2 div a:hover, .grid .grid1 div a:hover {
+  color: #ff0000;
+  transition: 300ms;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "g0 g0" "g1 g2";
+  grid-template-rows: repeat(auto-fit, minmax(100px, auto));
+}
+.grid .grid0 {
+  grid-area: g0;
+  font-size: 3rem;
+}
+.grid .grid1 {
+  grid-area: g1;
+}
+.grid .grid1 div {
+  padding: 0 0 1rem 0;
+  max-width: 100%;
+}
+.grid .grid2 {
+  grid-area: g2;
+}
+.grid .grid2 div {
+  padding: 0 0 1rem 0;
+  max-width: 100%;
+}
+
+img {
+  height: 30rem;
+  max-width: 100%;
+}
+
+.position {
+  position: relative;
+}
+
+.display0 .display1 {
+  background-color: rgba(156, 182, 241, 0.51);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 300ms;
+  padding: 0 1rem 0 1rem;
+}
+.display0 .display1 p:hover {
+  color: red;
+}
+.display0 .display1:hover {
+  opacity: 1;
+  transition: 300ms;
+}
+
+.newGrid {
+  display: grid;
+  padding: 1rem;
+  font-size: 2rem;
+  grid-gap: 1rem;
+  grid-template-areas: "g0 g0 g0 g0" "g1 g2 g3 g4";
+  grid-template-rows: repeat(auto-fit, minmax(0, auto));
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+}
+.newGrid .grid0 {
+  font-weight: 700;
+  font-family: "Arial";
+  grid-area: g0;
+}
+.newGrid .grid1 {
+  grid-area: g1;
+}
+.newGrid .grid1 div {
+  padding: 2rem 1rem 1rem 1rem;
+  font-size: 1.8rem;
+}
+.newGrid .grid2 {
+  grid-area: g2;
+}
+.newGrid .grid2 div {
+  padding: 2rem 1rem 1rem 1rem;
+  font-size: 1.8rem;
+}
+.newGrid .grid3 {
+  grid-area: g3;
+}
+.newGrid .grid3 div {
+  padding: 2rem 1rem 1rem 1rem;
+  font-size: 1.8rem;
+}
+.newGrid .grid4 {
+  grid-area: g4;
+  justify-content: center;
+}
+.newGrid .grid4 div {
+  padding: 2rem 1rem 1rem 1rem;
+  font-size: 1.8rem;
+}
+
+.d1 {
+  font-weight: 600;
+  padding: 0 0 2rem 0;
+}
+
+@media screen and (max-width: 1440px) {
+  .newGrid .grid0 {
+    overflow-wrap: break-word;
+  }
+  .newGrid .grid1 {
+    overflow-wrap: break-word;
+  }
+  .newGrid .grid2 {
+    overflow-wrap: break-word;
+  }
+  .newGrid .grid3 {
+    overflow-wrap: break-word;
+  }
+  .newGrid .grid4 {
+    overflow-wrap: break-word;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .newGrid {
+    grid-template-areas: "g0 g0" "g1 g2" "g3 g4";
+  }
+  .newGrid .grid0 {
+    overflow-wrap: break-word;
+  }
+  .newGrid .grid1 {
+    overflow-wrap: break-word;
+  }
+  .newGrid .grid2 {
+    overflow-wrap: break-word;
+  }
+  .newGrid .grid3 {
+    overflow-wrap: break-word;
+  }
+  .newGrid .grid4 {
+    overflow-wrap: break-word;
+  }
+}
+@media screen and (max-width: 800px) {
+  .grid {
+    grid-template-areas: "g0" "g1" "g2";
+  }
+  .grid .grid0 {
+    font-size: 2rem;
+    word-break: break-all;
+  }
+}
+@media screen and (max-width: 425px) {
+  .newGrid {
+    grid-template-areas: "g0" "g1" "g2" "g3" "g4";
+  }
+}
+@media screen and (max-width: 420px) {
+  .grid .grid0 {
+    font-size: 2rem;
+  }
+  .grid .grid1 {
+    font-size: 1.5rem;
+  }
+  .grid .grid2 {
+    font-size: 1.5rem;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=veka.module.css.map */

@@ -1,0 +1,221 @@
+%shablonFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+%shablonFlexies {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hight {
+    font-weight: 600;
+    margin: 1rem 0;
+    @extend %shablonFlex;
+}
+
+.photos {
+    display: grid;
+    margin: 0 2rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    div {
+        @extend %shablonFlex;
+    }
+}
+
+.photosBox {
+    display: flex;
+    position: relative;
+}
+
+.photosText {
+    @extend %shablonFlex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s;
+    background-color: white;
+
+    a {
+        font-family: 'RussoOne-Regular';
+        color: black;
+    }
+
+    a:hover {
+        color: red;
+    }
+}
+
+.photosText:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.head {
+    margin: 0 1rem 1rem 1rem;
+}
+
+.text {
+    font-size: 2rem;
+    cursor: default;
+    text-align: center;
+}
+
+.text1 {
+    @extend %shablonFlex;
+    margin: 1rem;
+    font-family: 'RussoOne-Regular';
+}
+
+.box {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 1rem;
+
+    div {
+        @extend %shablonFlexies;
+        background-color: rgba(178, 178, 178, 0.18);
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+}
+
+.text2 {
+    @extend %shablonFlex;
+    margin: 1rem;
+    font-family: 'RussoOne-Regular';
+    cursor: pointer;
+
+    button {
+        font-size: 2rem;
+        border-radius: 1rem;
+        background-color: #d7d7d7;
+        padding: 1rem;
+    }
+
+    button:active {
+        background-color: #5b5b5b
+    }
+}
+
+.flex {
+    margin: 1rem;
+    @extend %shablonFlexies;
+    border: solid;
+
+    .flex1 {
+        background-color: rgba(178, 178, 178, 0.18);
+        padding: 1rem;
+        width: 100%;
+        border: solid;
+        //border-width: 0.5rem 1rem;
+    }
+
+    .flex2 {
+        background-color: #d7d7d7;
+        padding: 1rem;
+        width: 100%;
+        border: solid;
+        //border-width: 0.5rem 1rem;
+    }
+}
+
+.flexZero {
+    height: 0;
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.p1 {
+    font-family: 'RussoOne-Regular';
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 2500px) {
+    .text {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text{
+        font-size: 1.6rem;
+    }
+    .photos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        div {
+        }
+    }
+    .margin{
+        margin: 1rem;
+        max-width: 50%;
+    }
+    .photosBox {
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        width: auto;
+        height: auto;
+    }
+    .box {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fit, minmax(0, auto));
+
+        div {
+        }
+    }
+    .text2 {
+        button {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .text{
+        font-size: 1.4rem;
+    }
+    .margin{
+        margin: 1rem;
+        max-width: 80%;
+    }
+    .box {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fit, minmax(0, auto));
+
+        div {
+        }
+    }
+    .text2 {
+        button {
+            font-size: 1.3rem;
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    .text2 {
+        button {
+            font-size: 1.2rem;
+        }
+    }
+}
+@media screen and (max-width: 280px){
+    .margin{
+        margin: 1rem;
+        max-width: 100%;
+    }
+}

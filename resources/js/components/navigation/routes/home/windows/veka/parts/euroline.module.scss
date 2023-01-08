@@ -1,0 +1,238 @@
+@import "http://otdushi-na-okna/fonts/RussoOne/RussoOne.css";
+
+%shablonNewFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+%shablonBacgroungColor {
+    background-color: rgba(178, 178, 178, 0.18);
+}
+
+%shablonColumnFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+%shablonGrid {
+    display: grid;
+    grid-template-areas:
+    "g0"
+    "g1";
+    grid-template-columns:  repeat(auto-fit, minmax(100px, auto));
+}
+
+$color: #fff200;
+
+.grid {
+    padding: 1rem;
+    @extend %shablonGrid;
+
+    .grid0 {
+        grid-area: g0;
+        @extend %shablonNewFlex;
+
+        .teg {
+            font-weight: 900;
+            font-size: 2rem;
+            span{
+                font-family: "RussoOne-Regular";
+                font-weight: 300;
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .grid1 {
+        grid-area: g1;
+        display: grid;
+        grid-gap: 1rem;
+        padding: 1rem;
+        grid-template-columns:  repeat(auto-fit, minmax(100px, auto));
+        grid-template-rows:  repeat(auto-fit, minmax(100px, auto));
+
+        div {
+            @extend %shablonNewFlex;
+            font-size: 2rem;
+            @extend %shablonBacgroungColor;
+            border-radius: 1rem;
+            padding: 1rem;
+            word-break: break-all;
+            button {
+                background-color: rgba(255, 255, 255, 0);
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.grid2 {
+    grid-area: g1;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    grid-template-columns:  repeat(auto-fit, minmax(100px, auto));
+    grid-template-rows:  repeat(auto-fit, minmax(100px, auto));
+
+    div {
+        @extend %shablonNewFlex;
+        font-size: 2rem;
+        @extend %shablonBacgroungColor;
+        border-radius: 1rem;
+        padding: 1rem;
+        word-break: break-all;
+        button {
+            background-color: rgba(255, 255, 255, 0);
+            font-size: 2rem;
+        }
+
+        transition: 300ms;
+    }
+
+    div:hover {
+        transition: 300ms;
+        background-color: rgba(178, 178, 178, 0.67);
+    }
+
+    div:active {
+        background-color: rgba(91, 90, 90, 0.82);
+
+        button {
+            color: $color;
+        }
+    }
+
+    .color {
+        background-color: rgba(91, 90, 90, 0.82);
+        box-shadow: 0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.3);
+
+        button {
+            color: $color;
+        }
+    }
+
+    .color:hover {
+        background-color: rgba(91, 90, 90, 0.82);
+        box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+
+        button {
+            color: $color;
+        }
+    }
+}
+
+.flex {
+    @extend %shablonNewFlex;
+    font-size: 2rem;
+    @extend %shablonBacgroungColor;
+
+    .f1 {
+        font-family: "RussoOne-Regular";
+    }
+
+    div {
+        padding: 1rem;
+
+        p {
+            @extend %shablonNewFlex;
+
+            padding: 0.2rem;
+        }
+    }
+}
+
+.newGrid {
+    padding: 1rem;
+    display: grid;
+    grid-template-areas:
+    "g0 g1";
+    grid-template-columns:  1fr 1fr;
+    font-size: 2rem;
+    grid-gap: 1rem;
+
+    .grid0 {
+        grid-area: g0;
+        @extend %shablonNewFlex;
+
+        img {
+            height: auto;
+            width: auto;
+        }
+    }
+
+    .grid1 {
+        font-size: 1.6rem;
+        grid-area: g1;
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(0, auto));
+        grid-gap: 1rem;
+
+        .gr1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .grid1_1 {
+            display: grid;
+            grid-gap: 1rem;
+
+            .grid1_2 {
+                border-radius: 1rem;
+                @extend %shablonColumnFlex;
+                @extend %shablonBacgroungColor;
+
+                div {
+                    @extend %shablonColumnFlex;
+                    padding: 1rem;
+                    overflow-wrap: break-word;
+                }
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .newGrid {
+        grid-template-areas:
+        "g0 g1";
+        grid-template-columns: repeat(auto-fit, minmax(0, auto));
+
+        .grid0 {
+            img {
+                display: none;
+            }
+        }
+    .grid1 {
+
+        .gr1 {
+        }
+
+        .grid1_1 {
+            .grid1_2 {
+                div {
+                }
+            }
+
+        }
+    }
+}
+}
+@media screen and (max-width: 500px){
+    .grid{
+        height: 100%;
+        .grid0{}
+        .grid1{
+            grid-template-columns: 1fr;
+        }
+    }
+    .grid2{
+        grid-template-columns: 1fr;
+        grid-template-rows:  repeat(auto-fit, minmax(0, auto))
+    }
+}

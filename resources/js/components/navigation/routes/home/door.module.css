@@ -1,0 +1,109 @@
+.hightGrid {
+  background-color: rgba(0, 0, 0, 0.76);
+  margin: 1rem 0 0 0;
+  display: grid;
+  border-width: 1rem;
+  border-style: ridge none ridge none;
+  border-color: #6e6600;
+  color: #9f9f00;
+}
+
+.hightGrid .grid3 img, .hightGrid .grid1 img {
+  max-height: 100%;
+  width: auto;
+}
+
+.hightGrid {
+  width: 100%;
+  height: 45rem;
+  grid-template-areas: "g0 g0 g0" "g1 g2 g3";
+  grid-gap: 1rem;
+  padding: 0 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(0px, auto));
+  grid-template-rows: repeat(auto-fit, minmax(0px, auto));
+}
+.hightGrid .grid0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 600;
+  grid-area: g0;
+}
+.hightGrid .grid1 {
+  max-height: 100%;
+  max-width: 100%;
+  grid-area: g1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.hightGrid .grid2 {
+  font-size: 2rem;
+  grid-area: g2;
+}
+.hightGrid .grid2 p {
+  padding-top: 1rem;
+}
+.hightGrid .grid3 {
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  grid-area: g3;
+}
+@media screen and (max-width: 1200px) {
+  .hightGrid {
+    height: 32rem;
+  }
+  .hightGrid .grid1 img {
+    max-width: 100%;
+    height: auto;
+  }
+  .hightGrid .grid2 {
+    font-size: 1.7rem;
+  }
+  .hightGrid .grid3 img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hightGrid {
+    height: 25rem;
+  }
+  .hightGrid .grid1 img {
+    max-width: 100%;
+    height: auto;
+  }
+  .hightGrid .grid2 {
+    font-size: 1.2rem;
+  }
+  .hightGrid .grid3 img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hightGrid {
+    grid-template-areas: "g0 g0" "g1 g3" "g2 g2";
+    height: 35rem;
+  }
+  .hightGrid .grid0 {
+    font-size: 2rem;
+  }
+  .hightGrid .grid1 img {
+    max-width: 100%;
+    height: auto;
+  }
+  .hightGrid .grid2 {
+    font-size: 1.2rem;
+  }
+  .hightGrid .grid3 img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=door.module.css.map */

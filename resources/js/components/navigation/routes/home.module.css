@@ -1,0 +1,111 @@
+.sliderBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.itemSe {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  height: 700px;
+  min-width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+.itemSe img {
+  position: absolute;
+  height: 700px;
+  width: 100%;
+}
+.itemSe .slideTextTitle {
+  position: absolute;
+  z-index: 999;
+  right: 25%;
+  top: 0;
+  color: #c9b031;
+  background-color: rgba(0, 0, 0, 0.45);
+  font-size: 3rem;
+}
+.itemSe .slideText1 {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  right: 25%;
+  color: #258ac9;
+  background-color: rgba(0, 0, 0, 0.66);
+  font-size: 2.5rem;
+}
+.itemSe .slideText2 {
+  position: absolute;
+  z-index: 999;
+  top: 70%;
+  right: 26.5%;
+  color: #25c93b;
+  background-color: rgb(0, 0, 0);
+  font-size: 3rem;
+}
+.itemSe .slideText3 {
+  position: absolute;
+  z-index: 999;
+  right: 25%;
+  top: 0;
+  color: #c00101;
+  background-color: rgba(0, 0, 0, 0.62);
+  font-size: 4rem;
+}
+.itemSe .slideText4 {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  right: 30%;
+  color: #c92525;
+  background-color: rgba(0, 0, 0, 0.66);
+  font-size: 2.5rem;
+}
+.itemSe .slideText5 {
+  position: absolute;
+  z-index: 999;
+  top: 70%;
+  right: 31%;
+  color: #25c93b;
+  background-color: rgb(0, 0, 0);
+  font-size: 4rem;
+}
+.itemSe .slideText6 {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  right: 0;
+  top: 80%;
+  color: #f3dddd;
+  background-color: rgba(0, 0, 0, 0.62);
+  font-size: 4rem;
+  padding: 0 4rem 0 10rem;
+}
+.itemSe .slideText7 {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  right: 0;
+  top: 80%;
+  color: #ee8d54;
+  background-color: rgba(0, 0, 0, 0.62);
+  font-size: 4rem;
+  padding: 0 4rem 0 3rem;
+}
+
+.boxText {
+  margin: 1rem 0 1rem 0;
+  border: 0.3rem solid #7c0202;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=home.module.css.map */

@@ -1,0 +1,80 @@
+%shablonFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+%shablonFlexies{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.hight{
+    font-weight: 600;
+    margin: 1rem 0;
+    @extend %shablonFlex;
+}
+.head{
+    margin: 0 1rem 1rem 1rem;
+}
+.text{
+    font-size: 2rem;
+}
+.text1{
+    @extend %shablonFlex;
+    margin: 1rem;
+    font-family: 'RussoOne-Regular';
+}
+.box{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 1rem;
+    div{
+        @extend %shablonFlexies;
+        background-color: rgba(178, 178, 178, 0.18);
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+}
+.text2{
+    @extend %shablonFlex;
+    margin: 1rem;
+    font-family: 'RussoOne-Regular';
+    cursor: pointer;
+    div{
+
+        border-radius: 1rem;
+        background-color: #d7d7d7;
+        padding: 1rem;
+    }
+    div:active{
+        background-color: #5b5b5b
+    }
+}
+.flex{
+    margin: 1rem;
+    @extend %shablonFlexies;
+    border: solid;
+    .flex1{
+        background-color: rgba(178, 178, 178, 0.18);
+        padding: 1rem;
+        width: 100%;
+        border: solid;
+        //border-width: 0.5rem 1rem;
+    }
+    .flex2{
+        background-color: #d7d7d7;
+        padding: 1rem;
+        width: 100%;
+        border: solid;
+        //border-width: 0.5rem 1rem;
+    }
+}
+.p1{
+    font-family: 'RussoOne-Regular';
+    margin: 1rem 0;
+}

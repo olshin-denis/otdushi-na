@@ -1,0 +1,181 @@
+.burger {
+  display: flex;
+  position: relative;
+  width: 2.5rem;
+  height: 1rem;
+  left: -2rem;
+  top: 1.5rem;
+  z-index: 999;
+}
+
+.burger span {
+  position: absolute;
+  background-color: #ffffff;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  top: 0.7rem;
+  border-radius: 3rem;
+}
+
+.burger:before,
+.burger:after {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 0.3rem;
+  left: 0;
+  transition: 0.5s;
+  border-radius: 3rem;
+}
+
+.burger:before {
+  height: 0.25rem;
+  top: 0;
+}
+
+.burger:after {
+  bottom: 0;
+  top: 1.4rem;
+}
+
+.burger.Open:before {
+  transform: rotate(45deg);
+  top: 0.6rem;
+  height: 0.3rem;
+  transition: 0.5s;
+}
+
+.burger.Open:after {
+  transform: rotate(-45deg);
+  top: 0.6rem;
+  transition: 0.5s;
+}
+
+.burger.Open span {
+  display: none;
+}
+
+.newLinks {
+  position: fixed;
+  top: 0;
+  width: 768px;
+  height: 200rem;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 5rem;
+  width: 20rem;
+  z-index: 998;
+  background-color: black;
+}
+
+.blockLinks {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 200rem;
+  width: 20rem;
+  background-color: #333333;
+}
+
+.size {
+  position: absolute;
+  top: 5rem;
+}
+
+.button {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 0.2rem;
+}
+
+.teg {
+  display: flex;
+  margin: 0.5rem 0 0 0;
+}
+.teg div {
+  max-width: 100%;
+  padding: 0.2rem;
+  font-size: 1.5rem;
+  background-color: white;
+}
+
+.bloc {
+  position: relative;
+}
+.bloc .path {
+  display: none;
+}
+
+.bloc4:hover {
+  width: 5rem;
+}
+.bloc4:hover .path {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  background-color: white;
+  right: 5rem;
+  top: 0;
+}
+.bloc4:hover .path div .Link {
+  padding: 0.5rem;
+  color: black;
+}
+.bloc4:hover .path div .Link:hover {
+  color: red;
+}
+
+.bloc5:hover {
+  width: 14rem;
+}
+.bloc5:hover .path {
+  width: 14rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  background-color: white;
+  right: 14rem;
+  top: 0;
+}
+.bloc5:hover .path div .Link {
+  padding: 0.5rem;
+  color: black;
+}
+.bloc5:hover .path div .Link:hover {
+  color: red;
+}
+
+@media screen and (max-width: 500px) {
+  .nav {
+    height: 4rem;
+    width: 10rem;
+  }
+  .blockLinks {
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bloc5:hover {
+    text-align: center;
+    width: 9rem;
+  }
+  .bloc5:hover .path {
+    width: 9rem;
+    right: 9rem;
+  }
+}
+
+/*# sourceMappingURL=burger.module.css.map */

@@ -1,0 +1,277 @@
+@import "http://otdushi-na-okna/fonts/RussoOne/RussoOne.css";
+
+%shablonNewFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+%shablonNextFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+%shablonSizeWeight {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+%shablonBorder {
+    background-color: rgba(178, 178, 178, 0.18);
+    border-radius: 1rem;
+}
+
+%shablonBacgroungColor {
+    background-color: rgba(156, 182, 241, 0.2);
+}
+
+%shablonAHref {
+    a {
+
+        color: black;
+        transition: 300ms;
+    }
+
+    a:hover {
+        color: #ff0000;
+        transition: 300ms;
+    }
+}
+
+$width: 30rem;
+
+$padding: 1rem;
+
+$nextpadding: 2rem 1rem 1rem 1rem;
+
+.grid {
+    @extend %shablonBacgroungColor;
+    display: grid;
+    grid-template-areas:
+        "g0 g0"
+        "g1 g2";
+    grid-template-rows:  repeat(auto-fit, minmax(100px, auto));
+
+    .grid0 {
+        @extend %shablonNewFlex;
+        grid-area: g0;
+        font-size: 3rem;
+    }
+
+    .grid1 {
+        @extend %shablonSizeWeight;
+        grid-area: g1;
+
+        div {
+            @extend %shablonNewFlex;
+            padding: 0 0 1rem 0;
+            @extend %shablonAHref;
+            max-width: 100%;
+        }
+    }
+
+    .grid2 {
+        @extend %shablonSizeWeight;
+        grid-area: g2;
+
+        div {
+            @extend %shablonNewFlex;
+            padding: 0 0 1rem 0;
+            @extend %shablonAHref;
+            max-width: 100%;
+        }
+    }
+}
+
+img {
+    height: 30rem;
+    max-width: 100%;
+}
+
+.position{
+    position: relative;
+}
+
+.display0 {
+    .display1 {
+        background-color: rgba(156, 182, 241, 0.51);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 300ms;
+        padding: 0 1rem 0 1rem;
+        p:hover {
+            color: red;
+        }
+    }
+    .display1:hover {
+        opacity: 1;
+        transition: 300ms;
+    }
+}
+
+.newGrid {
+    display: grid;
+    padding: 1rem;
+    font-size: 2rem;
+    grid-gap: 1rem;
+    grid-template-areas:
+    "g0 g0 g0 g0"
+    "g1 g2 g3 g4";
+    grid-template-rows: repeat(auto-fit, minmax(0, auto));
+    grid-template-columns:  repeat(auto-fit, minmax(0, auto));
+    .grid0 {
+        @extend %shablonNewFlex;
+        //@extend %shablonBorder;
+        font-weight: 700;
+        font-family: "Arial";
+        grid-area: g0;
+    }
+    .grid1 {
+        grid-area: g1;
+        div {
+            padding: $nextpadding;
+            @extend %shablonNextFlex;
+            font-size: 1.8rem;
+        }
+        @extend %shablonBorder;
+    }
+    .grid2 {
+        grid-area: g2;
+        @extend %shablonBorder;
+        div {
+            padding: $nextpadding;
+            @extend %shablonNextFlex;
+            font-size: 1.8rem;
+        }
+    }
+
+    .grid3 {
+        grid-area: g3;
+
+        @extend %shablonBorder;
+
+        div {
+            padding: $nextpadding;
+            @extend %shablonNextFlex;
+            font-size: 1.8rem;
+
+        }
+    }
+
+    .grid4 {
+        grid-area: g4;
+        justify-content: center;
+        @extend %shablonBorder;
+
+        div {
+            padding: $nextpadding;
+            @extend %shablonNextFlex;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.d1 {
+    font-weight: 600;
+    padding: 0 0 2rem 0;
+}
+
+@media screen and (max-width: 1440px) {
+    .newGrid {
+        .grid0 {
+            overflow-wrap: break-word;
+        }
+        .grid1 {
+            overflow-wrap: break-word;
+        }
+        .grid2 {
+            overflow-wrap: break-word;
+        }
+        .grid3 {
+            overflow-wrap: break-word;
+        }
+        .grid4 {
+            overflow-wrap: break-word;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .newGrid {
+        grid-template-areas:
+        "g0 g0"
+        "g1 g2"
+        "g3 g4";
+        .grid0 {
+            overflow-wrap: break-word;
+        }
+        .grid1 {
+            overflow-wrap: break-word;
+        }
+        .grid2 {
+            overflow-wrap: break-word;
+        }
+        .grid3 {
+            overflow-wrap: break-word;
+        }
+        .grid4 {
+            overflow-wrap: break-word;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .grid {
+        .grid0 {
+            font-size: 2rem;
+            word-break: break-all;
+        }
+
+        .grid1 {
+        }
+
+        .grid2 {
+        }
+
+        grid-template-areas:
+        "g0"
+        "g1"
+        "g2";
+    }
+}
+
+@media screen and (max-width: 425px){
+    .newGrid {
+        grid-template-areas:
+        "g0"
+        "g1"
+        "g2"
+        "g3"
+        "g4";
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .grid {
+        .grid0 {
+            font-size: 2rem
+        }
+
+        .grid1 {
+            font-size: 1.5rem
+        }
+
+        .grid2 {
+            font-size: 1.5rem
+        }
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

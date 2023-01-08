@@ -1,0 +1,211 @@
+@import "http://otdushi-na-okna/fonts/Lobster/lobster.css";
+@import "http://otdushi-na-okna/fonts/RussoOne/RussoOne.css";
+.had, .nextGrid .nextGrid0 div, .flexBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newGrid .grid6, .newGrid .grid5, .newGrid .grid4, .newGrid .grid3, .newGrid .grid2, .newGrid .grid1, .newGrid .grid0 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.newGrid .grid6, .newGrid .grid5, .newGrid .grid4, .newGrid .grid3, .newGrid .grid2, .newGrid .grid1, .newGrid .grid0 {
+  background-color: rgba(178, 178, 178, 0.18);
+  border-radius: 1rem;
+}
+
+.newGrid {
+  background-color: aliceblue;
+  padding: 1rem;
+  font-size: 2rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas: "g0 g0 g0" "g1 g2 g3" "g4 g5 g6";
+  grid-template-rows: 1fr 5fr 5fr;
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+}
+.newGrid .grid0 {
+  grid-area: g0;
+  background-color: aliceblue;
+}
+.newGrid .grid1 {
+  grid-area: g1;
+}
+.newGrid .grid1 div {
+  padding: 1rem;
+}
+.newGrid .grid2 {
+  grid-area: g2;
+}
+.newGrid .grid2 div {
+  padding: 1rem;
+}
+.newGrid .grid3 {
+  grid-area: g3;
+}
+.newGrid .grid3 div {
+  padding: 1rem;
+}
+.newGrid .grid4 {
+  grid-area: g4;
+}
+.newGrid .grid4 div {
+  padding: 1rem;
+}
+.newGrid .grid5 {
+  grid-area: g5;
+}
+.newGrid .grid5 div {
+  padding: 1rem;
+}
+.newGrid .grid6 {
+  grid-area: g6;
+}
+.newGrid .grid6 div {
+  padding: 1rem;
+}
+
+.d1 {
+  font-weight: 600;
+}
+
+.font {
+  font-family: "RussoOne-Regular";
+}
+
+.flexBlock {
+  left: 50%;
+  padding: 2rem 0;
+  background-color: aliceblue;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.nextGrid {
+  margin: 0 2rem 2rem 2rem;
+  background-color: white;
+  border: 1rem ridge grey;
+  font-size: 2rem;
+  grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(0, auto));
+}
+.nextGrid .nextGrid0 {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+}
+.nextGrid .nextGrid0 div {
+  align-items: start;
+}
+.nextGrid .gary {
+  background-color: rgba(128, 128, 128, 0.52);
+  padding: 1rem;
+}
+.nextGrid .white {
+  padding: 1rem;
+}
+.nextGrid .hr {
+  border-bottom: 0.2rem solid black;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.89);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.89);
+  box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.89);
+}
+
+.had button {
+  margin: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  transition: 300ms;
+}
+.had button:hover {
+  transition: 300ms;
+  background-color: #d7d7d7;
+}
+.had button:active {
+  transition: 300ms;
+  background-color: #5b5b5b;
+}
+
+.displaed {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .newGrid {
+    grid-template-areas: "g0 g0 " "g1 g2" "g3 g4" "g5 g6";
+    font-size: 1.5rem;
+  }
+  .had button {
+    font-size: 2rem;
+  }
+  .nextGrid {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .newGrid {
+    font-size: 1.5rem;
+  }
+  .had button {
+    font-size: 1.5rem;
+  }
+  .nextGrid {
+    font-size: 1.2rem;
+  }
+  .nextGrid .nextGrid0 div {
+    max-width: 100%;
+    word-break: break-all;
+  }
+  .flexBlock {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .newGrid {
+    font-size: 1.5rem;
+  }
+  .had button {
+    font-size: 1.5rem;
+  }
+  .nextGrid {
+    font-size: 1.2rem;
+  }
+  .nextGrid .nextGrid0 div {
+    max-width: 100%;
+    word-break: break-all;
+  }
+  .flexBlock {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .newGrid {
+    font-size: 1.2rem;
+    word-break: break-all;
+  }
+  .had button {
+    font-size: 1.5rem;
+  }
+  .nextGrid {
+    font-size: 1.2rem;
+  }
+  .nextGrid .nextGrid0 div {
+    max-width: 100%;
+    word-break: break-all;
+  }
+  .flexBlock {
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=blitz.module.css.map */

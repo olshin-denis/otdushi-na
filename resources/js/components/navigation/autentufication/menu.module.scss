@@ -1,0 +1,296 @@
+%shablonLinks{
+    display: block;
+    font-size: 1.5rem;
+    position: absolute;
+    background-color: aliceblue;
+    transform: skew(-30deg);
+    color: black;
+}
+
+%shablonLinksGate{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: absolute;
+    //border-radius: 1rem;
+    background-color: rgba(240, 248, 255, 0);
+    transform: skew(-30deg);
+    color: black;
+}
+
+$BigSize: 2rem;
+.box {
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.icon{
+    height: 5rem;
+    width: 8rem;
+    background-color: black;
+}
+
+
+
+
+.bloc{
+    width: 7rem;
+    height: 5rem;
+    background-color: aliceblue;
+    transform: skew(30deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .link{
+        border-radius: 1rem;
+        width: auto;
+        height: auto;
+        font-size: 1.8rem;
+        background-color: aliceblue;
+        transform: skew(-30deg);
+    }
+}
+.bloc:hover{
+    background-color: #858d91;
+    transition: 0.5s;
+    .link{
+        background-color: #858d91;
+        transition: 0.5s;
+    }
+}
+.bloc1{
+    position: absolute;
+    left: 45%;
+}
+.bloc3{
+    position: absolute;
+    left: 75%;
+}
+.bloc4{
+    transition: 0s;
+    position: absolute;
+    flex-direction: column;
+    left: 55%;
+    height: 5rem;
+    .rehau{
+        display: none;
+    }
+    .veka{
+        display: none;
+    }
+    .gealan{
+        display: none;
+    }
+}
+.bloc4:hover{
+    transition: 0s;
+    position: absolute;
+    flex-direction: column;
+    left: 57.05%;
+    height: 13rem;
+
+    .rehau{
+        top: 5rem;
+        @extend %shablonLinks;
+
+        background-color: #858d91;
+    }
+    .veka{
+        top: 7.5rem;
+        @extend %shablonLinks;
+
+        background-color: #858d91;
+    }
+    .gealan{
+        top: 9.9rem;
+        @extend %shablonLinks;
+        background-color: #858d91;
+    }
+    .rehau:hover,
+    .veka:hover,
+    .gealan:hover{
+        color: red;
+    }
+}
+
+.bloc5{
+    transition: 0s;
+    position: absolute;
+    flex-direction: column;
+    left: 65.05%;
+    height: 5rem;
+    .rehau{
+        display: none;
+    }
+    .veka{
+        display: none;
+    }
+    .gealan{
+        display: none;
+    }
+    .rollerGates{
+        display: none;
+    }
+}
+.bloc5:hover{
+    transition: 0s;
+    position: absolute;
+    flex-direction: column;
+    left: 68.6%;
+    height: 19rem;
+
+    .rehau{
+        @extend %shablonLinksGate;
+        top: 5rem;
+    }
+    .veka{
+        @extend %shablonLinksGate;
+        top: 9rem;
+    }
+    .gealan{
+        @extend %shablonLinksGate;
+        top: 13rem;
+    }
+    .rollerGates{
+        @extend %shablonLinksGate;
+        top: 15rem;
+    }
+    .rehau:hover,
+    .veka:hover,
+    .gealan:hover,
+    .rollerGates:hover{
+        color: red;
+    }
+}
+
+.teg{
+    top: 1.5rem;
+    position: absolute;
+    font-size: 1.8rem;
+    transform: skew(-30deg);
+    cursor: default;
+}
+
+.men {
+    font-size: 1.2rem;
+}
+
+.bloc2{
+    opacity: 0;
+}
+
+@media screen and (min-width: 2200px){
+    .bloc{
+        .link{font-size: 3rem}
+    }
+    .bloc1{
+        width: 11.5rem;
+    }
+    .bloc3{
+        width: 11.5rem;
+    }
+    .bloc4{
+        width: 12rem;
+        .teg{
+            top: 1rem;
+            font-size: 3rem;
+        }
+    }
+    .bloc4:hover{
+        left: 56.3%;
+        .rehau{
+            font-size: $BigSize;
+        }
+        .veka{
+            font-size: $BigSize;
+        }
+        .gealan{
+            font-size: $BigSize;
+        }
+    }
+    .bloc5{
+        width: 12rem;
+        .teg{
+            top: 1rem;
+            font-size: 3rem;
+        }
+    }
+    .bloc5:hover{
+        left: 67.2%;
+        .rehau{
+            font-size:$BigSize;
+        }
+        .veka{
+            font-size:$BigSize;
+        }
+        .gealan{
+            font-size:$BigSize;
+        }
+        .rollerGates{
+            font-size:$BigSize;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .bloc{
+    }
+    .bloc3{
+        margin-right: 5rem;
+    }
+}
+@media screen and (max-width: 1024px){
+    .bloc1{
+        left: 40%;
+    }
+    .bloc3{
+        left: 85%;
+    }
+    .bloc4{
+        left: 55%;
+    }
+    .bloc4:hover{
+        left: 58.1%;
+    }
+
+    .bloc5{
+        left: 70%;
+    }
+    .bloc5:hover{
+        left: 75.5%;
+    }
+
+}
+@media screen and (max-width: 850px){
+    .bloc{
+        .link{
+            font-size: 1.5rem;
+        }
+    }
+    .bloc1{
+        margin-right: -12rem;
+    }
+    .bloc3{
+        margin-right: 5rem;
+    }
+}
+@media screen and (max-width: 425px){
+    .icon{
+        height: 4rem;
+        width: 6.5rem;
+    }
+    .bloc{
+        margin-top: -7.5rem;
+        .link{
+            font-size: 1.3rem;
+        }
+    }
+    .bloc1{
+        margin-right: -20rem;
+    }
+    .bloc3{
+        margin-right: 3.5rem;
+    }
+}

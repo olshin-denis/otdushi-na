@@ -1,0 +1,139 @@
+@import "http://otdushi-na-okna/fonts/Lobster/lobster.css";
+@import "http://otdushi-na-okna/fonts/RussoOne/RussoOne.css";
+
+%shablonNewFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+%shablonNextFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+%shablonSizeWeight {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+%shablonBorder {
+    background-color: rgba(178, 178, 178, 0.18);
+    border-radius: 1rem;
+}
+
+%shablonAHref{
+    a {
+
+        color: black;
+        transition: 300ms;
+    }
+
+    a:hover {
+        color: #ff0000;
+        transition: 300ms;
+    }
+}
+
+$width: 30rem;
+
+$padding: 1rem;
+
+.grid {
+    background-color: aliceblue;
+    display: grid;
+    grid-template-areas:
+        "g0 g0 g0"
+        "g1 g2 g3";
+    grid-template-rows:  repeat(auto-fit, minmax(0px, auto));
+
+    .grid0 {
+        @extend %shablonNewFlex;
+        grid-area: g0;
+        font-size: 3rem;
+    }
+
+    .grid1 {
+        @extend %shablonSizeWeight;
+        grid-area: g1;
+
+        div {
+            @extend %shablonNewFlex;
+            padding: 0 0 1rem 0;
+            @extend %shablonAHref;
+        }
+    }
+
+    .grid2 {
+        @extend %shablonSizeWeight;
+        grid-area: g2;
+
+        div {
+            @extend %shablonNewFlex;
+            padding: 0 0 1rem 0;
+            @extend %shablonAHref;
+        }
+    }
+
+    .grid3 {
+        @extend %shablonSizeWeight;
+        grid-area: g3;
+
+        div {
+            @extend %shablonNewFlex;
+            padding: 0 0 1rem 0;
+            @extend %shablonAHref;
+        }
+    }
+}
+
+img {
+    height: 30rem;
+    width: $width;
+}
+
+.display0 {
+    position: relative;
+
+    .display1 {
+        background-color: rgba(156, 182, 241, 0.51);
+        position: absolute;
+        height: 100%;
+        width:  100%;
+        opacity: 0;
+        transition: 300ms;
+        padding: 0 1rem 0 1rem;
+
+        a {
+            @extend %shablonNewFlex;
+        }
+    }
+
+    .display1:hover {
+        opacity: 1;
+        transition: 300ms;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .grid{
+        grid-template-areas:
+        "g0"
+        "g1"
+        "g2"
+        "g3";
+
+        .grid1{font-size: 1.5rem;}
+        .grid2{font-size: 1.5rem;}
+        .grid3{font-size: 1.5rem;}
+    }
+}
+@media screen and (max-width: 400px) {
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}

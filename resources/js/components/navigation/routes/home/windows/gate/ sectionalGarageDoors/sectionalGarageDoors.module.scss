@@ -1,0 +1,260 @@
+%shablonFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+%shablonNewFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+%shablonFlexies {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.head {
+    @extend %shablonFlex;
+    font-family: 'RussoOne-Regular';
+    margin: 1rem 0;
+}
+
+.photos {
+    display: grid;
+    margin: 0 2rem;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    div {
+        @extend %shablonFlex;
+    }
+}
+
+.text {
+    font-size: 2rem;
+}
+
+.text1 {
+    @extend %shablonFlex;
+    margin: 2rem 0;
+    font-family: 'RussoOne-Regular';
+}
+
+.box {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 1rem;
+
+    div {
+        @extend %shablonFlexies;
+        background-color: rgba(178, 178, 178, 0.18);
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+}
+
+.p1 {
+    font-family: 'RussoOne-Regular';
+    margin: 1rem 0;
+}
+
+.text2 {
+    @extend %shablonFlex;
+    margin: 1rem;
+    font-family: 'RussoOne-Regular';
+
+    button {
+        font-size: 2rem;
+        border-radius: 1rem;
+        background-color: #d7d7d7;
+        padding: 1rem;
+    }
+
+    button:active {
+        background-color: #5b5b5b
+    }
+}
+
+.flex {
+    margin: 1rem;
+    @extend %shablonFlexies;
+    border: solid;
+
+    .flex1 {
+        background-color: rgba(178, 178, 178, 0.18);
+        padding: 1rem;
+        width: 100%;
+        border: solid;
+        //border-width: 0.5rem 1rem;
+    }
+
+    .flex2 {
+        background-color: #d7d7d7;
+        padding: 1rem;
+        width: 100%;
+        border: solid;
+        //border-width: 0.5rem 1rem;
+    }
+}
+
+.flexZero {
+    height: 0;
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.box1 {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 1rem;
+
+    div {
+        @extend %shablonFlexies;
+        background-color: rgba(178, 178, 178, 0.18);
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+}
+
+.photosBox {
+    display: flex;
+    position: relative;
+}
+
+.photosText {
+    @extend %shablonFlex;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    font-family: 'RussoOne-Regular';
+
+    a {
+        color: black;
+    }
+
+    a:hover {
+        color: red;
+    }
+}
+
+.photosText:hover {
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 2500px) {
+    .text {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text{
+        font-size: 1.7rem;
+    }
+    .photos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .margin{
+        margin: 1rem;
+        max-width: 50%;
+    }
+    img {
+        width: auto;
+        height: auto;
+    }
+    .box {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fit, minmax(0, auto));
+
+        div {
+        }
+    }
+    .text2 {
+        button {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .photos{
+    }
+    .margin{
+        margin: 1rem;
+        max-width: 80%;
+    }
+    img {
+    }
+    .box {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fit, minmax(0, auto));
+
+        div {
+        }
+    }
+    .text2 {
+        button {
+            font-size: 1.3rem;
+        }
+    }
+    .text1{
+        font-size: 1.3rem;
+        margin: 0.5rem;
+    }
+    .box1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fit, minmax(0, auto));
+
+        div {
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .text{
+        font-size: 1.5rem;
+    }
+    .photos{
+    }
+    .margin{
+        margin: 1rem;
+        max-width: 100%;
+    }
+    img {
+    }
+    .text2 {
+        button {
+            font-size: 1.2rem;
+        }
+    }
+}
+@media screen and (max-width: 280px){
+    .text{
+        font-size: 1.3rem;
+    }
+    .text2 {
+        button {
+            font-size: 1rem;
+        }
+    }
+    .text1{
+        font-size: 1.1rem;
+    }
+}

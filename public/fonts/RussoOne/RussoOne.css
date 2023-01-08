@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "RussoOne-Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("RussoOne-Regular.eot") format("eot");
+  src: local("Lobster-Regular"), url("RussoOne-Regular.woff2") format("woff2"), url("RussoOne-Regular.woff") format("woff"), url("RussoOne-Regular.ttf") format("ttf"), url("RussoOne-Regular.svg") format("svg");
+}
+
+/*# sourceMappingURL=RussoOne.css.map */

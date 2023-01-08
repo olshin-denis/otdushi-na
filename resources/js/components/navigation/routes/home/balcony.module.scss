@@ -1,0 +1,304 @@
+%shablonhightGrid {
+    background-color: rgba(0, 0, 0, 0.76);
+    margin: 1rem 0 0 0;
+    display: grid;
+    width: 100%;
+    border-width: 1rem;
+    border-style: ridge none ridge none;
+    border-color: #6e6600;
+}
+
+%shablonImg {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+$height: 67rem;
+
+.hightGrid2 {
+    @extend %shablonhightGrid;
+    //height: $height;
+    color: #9f9f00;
+    grid-template-areas:
+    "g0 g0"
+    "g1 g2";
+    grid-template-columns: repeat(auto-fit, minmax(0px, auto));
+    grid-template-rows: repeat(auto-fit, minmax(0px, auto));
+
+    .grid0 {
+        padding: 0 0 1rem 0;
+        font-size: 3rem;
+        grid-area: g0;
+    }
+
+    .grid1 {
+        grid-area: g1;
+        display: grid;
+        grid-template-areas:
+        "g1_0 g1_0"
+        "g1_1 g1_2";
+        grid-template-columns: repeat(auto-fit, minmax(0px, auto));
+        grid-template-rows: repeat(auto-fit, minmax(0px, auto));
+        //padding: 0 0 1rem 1rem;
+        .grid1_0 {
+            grid-area: g1_0;
+            display: flex;
+            //grid-gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .grid1_1 {
+            grid-area: g1_1;
+            margin: 1rem;
+        }
+
+        .grid1_2 {
+            grid-area: g1_2;
+            margin: 1rem;
+        }
+
+        div {
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 1rem 0;
+                font-size: 2rem;
+                font-weight: 600;
+                //max-height: 100%;
+                //max-width: 100%;
+
+                img {
+                    @extend %shablonImg;
+                }
+            }
+        }
+    }
+
+    .grid2 {
+        padding: 0 1rem 2rem 1rem;
+        font-size: 2rem;
+        height: $height;
+        max-height: 100%;
+        grid-area: g2;
+        display: flex;
+        flex-direction: column;
+        //justify-content: center;
+        p {
+            //color: #5d321d;
+            font-weight: 700;
+            font-size: 2.7rem;
+            padding: 3rem 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .hightGrid2 {
+        height: 60rem;
+    }
+    .img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .hightGrid2 {
+        height: 46rem;
+
+        .grid0 {
+            font-size: 2.2rem;
+        }
+
+        .grid1 {
+            .grid1_0 {
+            }
+
+            .grid1_1 {
+                height: 100%;
+                font-size: 1.5rem;
+            }
+
+            .grid1_2 {
+                height: 100%;
+                font-size: 1.5rem;
+            }
+
+            div {
+                div {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+
+        .grid2 {
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+    .img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .hightGrid2 {
+        height: 70rem;
+        grid-template-areas:
+            "g0"
+            "g1"
+            "g1"
+            "g1"
+            "g2";
+        grid-template-columns: repeat(auto-fit, minmax(0px, auto));
+        grid-template-rows: repeat(auto-fit, minmax(0px, auto));
+        .grid0 {
+            font-size: 2.2rem;
+        }
+
+        .grid1 {
+            .grid1_0 {
+                //font-size: 1.2rem;
+            }
+
+            .grid1_1 {
+                //font-size: 1.2rem;
+            }
+
+            .grid1_2 {
+                //font-size: 1.2rem;
+            }
+
+            div {
+                div {
+                    font-size: 1.3rem;
+
+                    img {
+                        width: auto;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+
+        .grid2 {
+            p {
+                font-size: 1.8rem;
+                padding: 0.5rem 0 0 0;
+            }
+        }
+    }
+    .img {
+
+    }
+}
+@media screen and (max-width: 320px) {
+    .hightGrid2 {
+        height: 65rem;
+        grid-template-areas:
+            "g0"
+            "g1"
+            "g1"
+            "g1"
+            "g2";
+        grid-template-columns: repeat(auto-fit, minmax(0px, auto));
+        grid-template-rows: repeat(auto-fit, minmax(0px, auto));
+        .grid0 {
+            font-size: 2.2rem;
+        }
+
+        .grid1 {
+            .grid1_0 {
+                font-size: 2rem;
+            }
+
+            .grid1_1 {
+                //font-size: 1.2rem;
+            }
+
+            .grid1_2 {
+                //font-size: 1.2rem;
+            }
+
+            div {
+                div {
+                    font-size: 1.3rem;
+
+                    img {
+                        width: auto;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+
+        .grid2 {
+            p {
+                font-size: 1.8rem;
+                padding: 0.5rem 0 0 0;
+            }
+        }
+    }
+    .img {
+
+    }
+}
+@media screen and (max-width: 280px) {
+    .hightGrid2 {
+        height: 65rem;
+        grid-template-areas:
+            "g0"
+            "g1"
+            "g1"
+            "g1"
+            "g2";
+        grid-template-columns: repeat(auto-fit, minmax(0px, auto));
+        grid-template-rows: repeat(auto-fit, minmax(0px, auto));
+        .grid0 {
+            font-size: 2rem;
+        }
+
+        .grid1 {
+            .grid1_0 {
+                font-size: 2rem;
+            }
+
+            .grid1_1 {
+                //font-size: 1.2rem;
+            }
+
+            .grid1_2 {
+                //font-size: 1.2rem;
+            }
+
+            div {
+                div {
+                    font-size: 1.1rem;
+
+                    img {
+                        width: auto;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+
+        .grid2 {
+            p {
+                font-size: 1.8rem;
+                padding: 0.5rem 0 0 0;
+            }
+        }
+    }
+    .img {
+
+    }
+}

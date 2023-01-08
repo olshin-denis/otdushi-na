@@ -1,0 +1,447 @@
+.boxText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.boxText img {
+  height: 30rem;
+  width: 25rem;
+}
+
+.hightGrid1, .hightGrid0_1, .hightGrid {
+  background-color: rgba(0, 0, 0, 0.76);
+  margin: 1rem 0 0 0;
+  display: grid;
+  width: 100%;
+  border-width: 1rem;
+  border-style: ridge none ridge none;
+  border-color: #6e6600;
+}
+
+.hightGrid .grid1 .grid1_6:hover, .hightGrid .grid1 .grid1_5:hover, .hightGrid .grid1 .grid1_4:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.hightGrid .grid1 .grid1_6, .hightGrid .grid1 .grid1_5, .hightGrid .grid1 .grid1_4 {
+  height: 100%;
+  width: 25rem;
+}
+
+.hightGrid {
+  padding: 1rem;
+  height: 41rem;
+  grid-template-areas: "g0 g0" "g1 g1";
+  grid-template-columns: repeat(auto-fit, minmax(0px, auto));
+  grid-template-rows: repeat(auto-fit, minmax(0px, auto));
+  color: #9f9f00;
+}
+.hightGrid .grid0 {
+  grid-area: g0;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+.hightGrid .grid1 {
+  grid-area: g1;
+  display: grid;
+  grid-template-areas: "g0_1 g0_2 g0_3" "g1_1 g1_2 g1_3";
+  grid-template-columns: repeat(auto-fit, minmax(0px, auto));
+  grid-template-rows: repeat(auto-fit, minmax(0px, auto));
+}
+.hightGrid .grid1 .grid0_1 {
+  grid-area: g0_1;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+.hightGrid .grid1 .grid0_2 {
+  grid-area: g0_2;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+.hightGrid .grid1 .grid0_3 {
+  grid-area: g0_3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.hightGrid .grid1 .grid1_1 {
+  grid-area: g1_1;
+}
+.hightGrid .grid1 .grid1_2 {
+  grid-area: g1_2;
+}
+.hightGrid .grid1 .grid1_3 {
+  grid-area: g1_3;
+}
+.hightGrid .grid1 .grid1_4 {
+  grid-area: g1_4;
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  top: 0;
+  transition: 0.3s;
+  display: flex;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.hightGrid .grid1 .grid1_5 {
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  top: 0;
+  transition: 0.3s;
+  display: flex;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.hightGrid .grid1 .grid1_6 {
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  top: 0;
+  transition: 0.3s;
+  display: flex;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.hightGrid .grid2 {
+  grid-area: g2;
+  font-size: 2.5rem;
+}
+
+.dive {
+  position: relative;
+}
+
+.hightGrid1 {
+  color: #9f9f00;
+  grid-template-areas: "g0 g0" "g1 g2";
+  grid-template-rows: repeat(auto-fit, minmax(0px, 10fr));
+  grid-template-columns: repeat(auto-fit, minmax(0px, 10fr));
+}
+.hightGrid1 .grid0 {
+  grid-area: g0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 1rem;
+  font-weight: 600;
+}
+.hightGrid1 .grid1 {
+  grid-area: g1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hightGrid1 .grid1 img {
+  position: absolute;
+  width: auto;
+  max-height: 100%;
+  transition: 0.2s;
+}
+.hightGrid1 .grid1 img:hover {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  transition: 0.2s;
+}
+.hightGrid1 .grid2 {
+  padding: 2rem 1rem 2rem 1rem;
+  font-size: 2rem;
+  max-height: 100%;
+  grid-area: g2;
+}
+
+.link {
+  margin: 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #736038;
+  font-size: 2rem;
+  color: #5e87b6;
+  font-weight: 700;
+  transition: 0.3s;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.3);
+}
+
+.link:hover {
+  background-color: #000000;
+  font-size: 2rem;
+  color: #b49e2a;
+  transition: 0.3s;
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.link:active {
+  color: #ff0000;
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.77);
+}
+
+.Link {
+  color: black;
+}
+
+.Link:hover {
+  color: red;
+}
+
+@media screen and (min-width: 2200px) {
+  .hightGrid {
+    height: 50rem;
+  }
+  .hightGrid .grid0 {
+    font-size: 3rem;
+  }
+  .hightGrid .grid1 .grid0_1 {
+    font-size: 3rem;
+  }
+  .hightGrid .grid1 .grid1_1 div .grid1_4 {
+    width: 100%;
+  }
+  .hightGrid .grid1 .grid0_2 {
+    font-size: 3rem;
+  }
+  .hightGrid .grid1 .grid1_2 .grid1_5 {
+    width: 100%;
+  }
+  .hightGrid .grid1 .grid0_3 {
+    font-size: 3rem;
+  }
+  .hightGrid .grid1 .grid1_3 .grid1_6 {
+    width: 100%;
+  }
+  .hightGrid1 .grid0 {
+    font-size: 3rem;
+  }
+  .hightGrid1 .grid1 img {
+    width: 40rem;
+    height: 40rem;
+  }
+  .hightGrid1 .grid1 img:hover {
+    width: 55rem;
+    height: 55rem;
+  }
+  .hightGrid1 .grid2 {
+    font-size: 3rem;
+  }
+  .hightGrid1 .grid2 .link {
+    font-size: 3rem;
+  }
+  .boxText img {
+    height: 37rem;
+    width: auto;
+  }
+  .Link {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hightGrid {
+    height: auto;
+    grid-gap: 1rem;
+  }
+  .hightGrid .grid0 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 {
+    grid-gap: 1rem;
+  }
+  .hightGrid .grid1 .grid0_1 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 .grid1_1 div .grid1_4 {
+    width: 100%;
+  }
+  .hightGrid .grid1 .grid0_2 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 .grid1_2 .grid1_5 {
+    width: 100%;
+  }
+  .hightGrid .grid1 .grid0_3 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 .grid1_3 .grid1_6 {
+    width: 100%;
+  }
+  .boxText img {
+    height: 20rem;
+    width: auto;
+  }
+  .Link {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hightGrid {
+    height: auto;
+    grid-gap: 1rem;
+  }
+  .hightGrid .grid0 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 {
+    grid-gap: 1rem;
+  }
+  .hightGrid .grid1 .grid0_1 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 .grid1_1 div .grid1_4 {
+    width: 100%;
+  }
+  .hightGrid .grid1 .grid0_2 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 .grid1_2 .grid1_5 {
+    width: 100%;
+  }
+  .hightGrid .grid1 .grid0_3 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 .grid1_3 .grid1_6 {
+    width: 100%;
+  }
+  .hightGrid1 .grid0 {
+    font-size: 2rem;
+  }
+  .hightGrid1 .grid1 img {
+    width: 25em;
+    height: 30rem;
+  }
+  .hightGrid1 .grid1 img:hover {
+    width: 25rem;
+    height: 30rem;
+  }
+  .hightGrid1 .grid2 {
+    padding: 2rem 0 0 1rem;
+    font-size: 1.5rem;
+  }
+  .hightGrid1 .grid2 .link {
+    font-size: 1.5rem;
+  }
+  .boxText img {
+    height: 20rem;
+    max-width: 100%;
+  }
+  .Link {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hightGrid {
+    height: auto;
+    grid-gap: 1rem;
+  }
+  .hightGrid .grid0 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 {
+    grid-template-areas: "g0_1" "g1_1" "g0_2" "g1_2" "g0_3" "g1_3";
+    grid-gap: 1rem;
+  }
+  .hightGrid .grid1 .grid0_1 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 .grid1_1 div .grid1_4 {
+    width: 100%;
+  }
+  .hightGrid .grid1 .grid0_2 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 .grid1_2 .grid1_5 {
+    width: 100%;
+  }
+  .hightGrid .grid1 .grid0_3 {
+    font-size: 1.5rem;
+  }
+  .hightGrid .grid1 .grid1_3 .grid1_6 {
+    width: 100%;
+  }
+  .hightGrid1 {
+    grid-template-areas: "g0" "g1" "g2";
+    grid-template-rows: repeat(auto-fit, minmax(0px, 10fr));
+    grid-template-columns: repeat(auto-fit, minmax(0px, 10fr));
+  }
+  .hightGrid1 .grid0 {
+    font-size: 2rem;
+  }
+  .hightGrid1 .grid1 {
+    height: 30rem;
+  }
+  .hightGrid1 .grid1 img {
+    width: 30rem;
+    height: 30rem;
+  }
+  .hightGrid1 .grid2 {
+    padding: 2rem 0 0 1rem;
+    font-size: 1.5rem;
+  }
+  .hightGrid1 .grid2 .link {
+    font-size: 1.5rem;
+  }
+  .boxText img {
+    height: 20rem;
+    max-width: 100%;
+  }
+  .Link {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hightGrid1 .grid0 {
+    font-size: 2rem;
+  }
+  .hightGrid1 .grid1 {
+    height: 20rem;
+  }
+  .hightGrid1 .grid1 img {
+    width: 22rem;
+    height: 22rem;
+  }
+  .hightGrid1 .grid1 img:hover {
+    width: 22rem;
+    height: 22rem;
+  }
+  .hightGrid1 .grid2 {
+    padding: 2rem 0 0 1rem;
+    font-size: 1.5rem;
+  }
+  .hightGrid1 .grid2 .link {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 290px) {
+  .hightGrid1 .grid0 {
+    font-size: 2rem;
+  }
+  .hightGrid1 .grid1 {
+    height: 20rem;
+  }
+  .hightGrid1 .grid1 img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .hightGrid1 .grid1 img:hover {
+    width: 20rem;
+    height: 20rem;
+  }
+  .hightGrid1 .grid2 {
+    padding: 2rem 0 0 1rem;
+    font-size: 1.5rem;
+  }
+  .hightGrid1 .grid2 .link {
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=window.module.css.map */

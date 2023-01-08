@@ -1,0 +1,68 @@
+@import "../routes/home.module";
+.camera {
+    display: grid;
+    grid-template-columns: 0fr 10fr 0fr;
+    //border: 1rem ridge #39469b;
+    //margin: 0.5rem 1rem 0 1rem;
+    background-color: #6c7da4;
+    border-radius:0 0 10px 10px;
+    width: 100%;
+
+    .gridFlex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        width: 0;
+    }
+
+    .before, .after {
+        cursor: pointer;
+        position: relative;
+        //top: 83%;
+        width: auto;
+        margin-top: -48rem;
+        padding: 16px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        color: #000000;
+        z-index: 999;
+    }
+
+    .before{
+        margin-left: 2rem;
+    }
+
+    .after {
+        border-radius: 3px 0 0 3px;
+        margin-right: 2.87rem;
+    }
+
+    .before:hover,
+    .after:hover {
+        background-color: rgba(0, 0, 0, 0.39);
+    }
+}
+
+.main_container {
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    max-height: 100%;
+    width: 100%;
+}
+
+.window {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.all_pages_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    //transition-duration: 1s;
+}

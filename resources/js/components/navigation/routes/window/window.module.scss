@@ -1,0 +1,49 @@
+.number::-webkit-outer-spin-button,
+.number::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.number{
+    background-color: rgba(0, 0, 0, 0);
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bock{
+    margin-top: 3rem;
+    width: 300px;
+    height: 400px;
+}
+
+@media screen and (min-width: 2500px){
+    .bock{
+        margin: 5rem;
+        width: 600px;
+        height: 700px;
+    }
+    .cost{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 1440px){
+    .bock{
+        margin: 2rem;
+    }
+}
+@media screen and (max-width: 425px){
+    .bock{
+        margin: 1.5rem;
+    }
+}
+@media screen and (max-width: 320px){
+    .bock{
+        margin: 0rem;
+    }
+}
+@media screen and (max-width: 320px){
+    .bock{
+        margin: 0rem;
+    }
+}

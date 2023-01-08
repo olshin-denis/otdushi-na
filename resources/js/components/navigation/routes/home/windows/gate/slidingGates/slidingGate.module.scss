@@ -1,0 +1,166 @@
+%shablonFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+%shablonNewFlex{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+%shablonFlexies{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.text{
+    font-size: 2rem;
+}
+.text1{
+   @extend %shablonFlex;
+    margin: 1rem;
+    font-family: 'RussoOne-Regular';
+}
+.boxImage{
+    @extend %shablonFlex;
+}
+.box{
+    background-color: rgba(255, 227, 189, 0.32);
+    div{
+        @extend %shablonFlex;
+
+        padding: 1rem;
+    }
+}
+.p1{
+    font-family: 'RussoOne-Regular';
+    margin: 1rem 0;
+}
+.boxes{
+    margin: 1rem 0;
+    position: relative;
+    .nextBox{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(255, 227, 189, 0.32);
+        opacity: 0;
+        transition: 0.3s;
+        @extend %shablonFlex;
+        .p0{
+            font-family: 'RussoOne-Regular';
+        }
+    }
+    .nextBox:hover{
+        opacity: 0.8;
+        transition: 0.3s;
+    }
+}
+
+.text2{
+    @extend %shablonFlex;
+    margin: 2rem 0;
+    font-family: 'RussoOne-Regular';
+}
+
+.grid1{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1rem;
+    margin: 1rem;
+    div{
+        background-color: rgba(178, 178, 178, 0.18);
+        padding: 1rem;
+        border-radius: 1rem;
+        @extend %shablonFlex;
+    }
+}
+
+.grid2{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:1rem;
+    margin: 0 1rem 1rem 1rem;
+    div{
+        background-color: rgba(178, 178, 178, 0.18);;
+        padding: 1rem;
+        border-radius: 1rem;
+        @extend %shablonNewFlex;
+
+    }
+}
+.p2{
+    font-family: 'RussoOne-Regular';
+    margin:-1rem 0 1rem 0;
+}
+
+.flex{
+    @extend %shablonFlexies;
+    div{
+        @extend %shablonFlexies;
+        padding: 1rem;
+        width: 35rem;
+        height: 25rem;
+        background-color: rgba(178, 178, 178, 0.18);
+        border-radius: 1rem;
+        margin: 1rem;
+    }
+}
+@media screen and (min-width: 2500px){
+    .text{
+        font-size: 2.5rem;
+    }
+    .flex{
+        div{
+            width: 40rem;
+            height: 32rem;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .grid2{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        div{
+        }
+    }
+    .flex{
+        div{
+            width: 30rem;
+            height: auto;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .text{
+        font-size: 1.5rem;
+    }
+    .grid1{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, minmax(0, auto));
+    }
+    .grid2{
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(0, auto));
+        grid-template-columns: 1fr;
+        div{
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    .text{
+        font-size: 1.3rem;
+    }
+    .grid1{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, minmax(0, auto));
+    }
+}

@@ -1,0 +1,350 @@
+.hightGrid0_1 {
+  background-color: rgba(0, 0, 0, 0.76);
+  margin: 1rem 0 0 0;
+  display: grid;
+  width: 100%;
+  border-width: 1rem;
+  border-style: ridge none ridge none;
+  color: #9f9f00;
+  border-color: #6e6600;
+}
+
+.blocks .block4, .blocks .block3, .blocks .block1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.blocks2 .block2, .blocks2 .block1, .blocks .block2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Text1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.spinwrapper {
+  position: relative;
+  background: #ffffff;
+}
+.spinwrapper .spinner {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border: 3px solid transparent;
+  border-top-color: #162279;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+.spinwrapper .spinner:before, .spinwrapper .spinner:after {
+  content: "";
+  position: absolute;
+  border: 3px solid transparent;
+  border-radius: 50%;
+}
+.spinwrapper .spinner:before {
+  border-top-color: #57191d;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  animation: spin 3s linear infinite;
+}
+.spinwrapper .spinner:after {
+  border-top-color: #eac765;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.plan {
+  display: flex;
+  max-width: 100%;
+  height: 15rem;
+  margin: 1rem 0;
+}
+
+.blocks {
+  display: grid;
+  grid-template-areas: "b2 b2 b2 b2" "b1 b4 b4 b3" "b1 b4 b4 b3" "b1 b4 b4 b3";
+  grid-gap: 1rem;
+  grid-template-rows: repeat(auto-fit, minmax(0px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(0px, auto));
+}
+.blocks .block1 {
+  grid-area: b1;
+}
+.blocks .block2 {
+  grid-area: b2;
+}
+.blocks .block3 {
+  grid-area: b3;
+}
+.blocks .block4 {
+  grid-area: b4;
+}
+
+.blocks2 {
+  display: grid;
+  grid-template-areas: "b1" "b2";
+}
+.blocks2 .block1 {
+  grid-area: b1;
+}
+.blocks2 .block2 {
+  grid-area: b2;
+}
+
+.phone {
+  height: 20rem;
+}
+
+.blockFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.dateTable {
+  padding-top: 5rem;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  width: 20rem;
+}
+.dateTable div {
+  display: flex;
+  align-items: center;
+}
+
+.option {
+  font-family: "Times New Roman";
+  font-size: 1.4rem;
+  padding-left: 1rem;
+}
+
+select {
+  appearance: none;
+}
+
+.name {
+  padding: 0.5rem 0;
+  width: auto;
+  text-align: start;
+}
+
+.cost {
+  padding: 0.5rem 0;
+  width: auto;
+  text-align: start;
+}
+
+span {
+  font-family: "Arial";
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  padding: 0.3rem 0.5rem;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transition: 0.3s;
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.button:active {
+  color: red;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 0 0.5rem 0.5rem rgb(0, 0, 0);
+}
+
+.grid .grid1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.grid .grid2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.grid .grid3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.grid .grid4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  height: 15rem;
+}
+.grid .grid5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  height: 15rem;
+}
+.grid .grid6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  height: 15rem;
+}
+
+@media screen and (min-width: 2500px) {
+  .hightGrid0_1 {
+    font-size: 2rem;
+  }
+  .plan {
+    height: 30rem;
+  }
+  .phone {
+    height: 30rem;
+  }
+  .dateTable {
+    font-size: 2.5rem;
+  }
+  .option {
+    font-size: 2.5rem;
+  }
+  .option1 {
+    font-size: 1.5rem;
+  }
+  .option2 {
+    font-size: 1.5rem;
+  }
+  .button {
+    width: 20rem;
+    font-size: 2.5rem;
+  }
+  .Text1 {
+    font-size: 3rem;
+  }
+  .grid .grid1 {
+    font-size: 2.5rem;
+  }
+  .grid .grid2 {
+    font-size: 2.5rem;
+  }
+  .grid .grid3 {
+    font-size: 2.5rem;
+  }
+  .grid .grid4 {
+    font-size: 2.5rem;
+  }
+  .grid .grid5 {
+    font-size: 2.5rem;
+  }
+  .grid .grid6 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blocks2 {
+    display: grid;
+    grid-template-areas: "b1" "b2";
+  }
+  .blocks2 .block1 {
+    grid-area: b1;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  .blocks2 .block2 {
+    grid-area: b2;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  .plan {
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .blockFlex {
+    flex-direction: column;
+  }
+  .grid {
+    display: grid;
+    grid-template-areas: "g1 g1 g1" "g4 g4 g4" "g2 g2 g2" "g5 g5 g5" "g3 g3 g3" "g6 g6 g6";
+    grid-template-rows: repeat(auto-fit, minmax(0, auto));
+    grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  }
+  .grid .grid1 {
+    grid-area: g1;
+  }
+  .grid .grid2 {
+    grid-area: g2;
+  }
+  .grid .grid3 {
+    grid-area: g3;
+  }
+  .grid .grid4 {
+    grid-area: g4;
+  }
+  .grid .grid5 {
+    grid-area: g5;
+  }
+  .grid .grid6 {
+    grid-area: g6;
+  }
+}
+@media screen and (max-width: 320px) {
+  .option2 {
+    width: auto;
+  }
+  .option1 {
+    width: auto;
+  }
+  .cost {
+    text-align: start;
+  }
+}
+@media screen and (max-width: 320px) {
+  .dateTable {
+    width: 15rem;
+  }
+}
+
+/*# sourceMappingURL=choise.module.css.map */
